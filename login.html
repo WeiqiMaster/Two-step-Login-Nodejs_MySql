@@ -2,9 +2,14 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Login Form</title>
+		<title>Login</title>
 		<style>
 		.login-form {
+			width: 300px;
+			margin: 0 auto;
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		#registerDiv {
 			width: 300px;
 			margin: 0 auto;
 			font-family: Tahoma, Geneva, sans-serif;
@@ -33,6 +38,16 @@
 			font-weight: bold;
 			color: #ffffff;
 		}
+		#register {
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+		}
 		</style>
         <script>
             function submitAction()
@@ -44,10 +59,14 @@
 	<body>
 		<div class="login-form">
 			<h1>Enter Username</h1>
-			<form action="auth" method="POST">
-                <input type="text" name="username" placeholder="Username" >
+			<form action="auth" method="POST" onsubmit="submitAction();">
+                <input type="text" name="username" placeholder="Username" required>
 				<input type="submit">
-            </form>
+			</form>
+			<br>
+			<div id="registerDiv">
+				<a href="register" id="register">Register</a>
+			</div>
 		</div>
 	</body>
 </html>

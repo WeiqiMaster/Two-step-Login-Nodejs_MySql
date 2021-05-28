@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Login Form</title>
+		<title>Register</title>
 		<style>
 		.login-form {
 			width: 300px;
@@ -34,14 +34,20 @@
 			color: #ffffff;
 		}
 		</style>
+        <script>
+            function submitAction()
+            {
+                alert("Successfully registered!");
+            }
+        </script>
     </head>
 	<body>
 		<div class="login-form">
-            <h2>Verification code β has been sent to your email!</h2>
-			<h1>Please enter m1 and IV</h1>
-			<form action="m1" method="POST">
-                    <input type="text" name="m1" placeholder="M1" required>
-                    <input type="text" name="iv" placeholder="IV" required>
+			<h1>Enter Username</h1>
+			<form action="register" method="POST" onsubmit="submitAction();">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="text" name="email" placeholder="Email" required>
+				<input type="password" name="password" placeholder="Password(must be numbers)" required>
 				<input type="submit">
             </form>
 		</div>
